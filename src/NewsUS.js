@@ -51,7 +51,7 @@ const NewsUS = () => {
                                 href={article.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="news-card-link"
+                                className="custom-btn btn-2"
                             >
                                 Read more
                             </a>
