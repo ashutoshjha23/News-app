@@ -1,0 +1,97 @@
+.news-container, .search-container1{
+    padding: 20px;
+    background-color: black;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.news-card-image {
+    width: 100%;
+    height: auto;
+}
+
+.news-card-content {
+    padding: 15px;
+}
+
+.news-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.news-card-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.custom-btn.btn-2 {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.custom-btn.btn-2:hover {
+    background-color: #0056b3;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 0 5px;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-button.active {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+
+.page-button:hover {
+    background-color: #e2e6ea;
+}

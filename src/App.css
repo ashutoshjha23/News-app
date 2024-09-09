@@ -1,24 +1,25 @@
-/* App.css */
+body{
+  background-color: #000000;
+}
 
-/* Base styles for light mode */
 .app-container {
-  text-align: center;
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   transition: background-color 0.3s, color 0.3s;
-  position: relative; /* Ensure positioning context for toggle switch */
+  padding: 0 20px; 
 }
 
 .app-title {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 4rem;
+  font-size: 2.5rem; 
+  left: 20px;
   font-weight: bold;
+  margin: 20px 0;
+  margin-left: 16px; 
 }
 
 .app-description {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: #555;
   max-width: 800px;
@@ -32,16 +33,22 @@
 }
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(0, 0, 0);
   padding: 10px 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  width: fit-content;
-  transition: top 0.3s ease-in-out;
   position: sticky;
   top: 0; 
   z-index: 1000;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin: 0; 
+}
+
+.menu-icon {
+  display: none; 
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -49,13 +56,12 @@
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -68,36 +74,56 @@
   margin-top: 20px;
 }
 
-/* Dark mode styles */
-.dark-mode .app-container {
-  background-color: #121212;
-  color: #ffffff;
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2rem; 
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px; 
+  }
+
+  .menu-icon {
+    display: block; 
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%; 
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    margin: 10px 0;
+  }
 }
 
-.dark-mode .app-description {
-  color: #ddd;
-  background-color: rgba(30, 30, 30, 0.9); 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.1);
+
+.social-media-links {
+  text-align: center;
+  margin-top: 40px;
 }
 
-.dark-mode .navbar {
-  background-color: rgba(30, 30, 30, 0.8);
+.social-media-links h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-.dark-mode .nav-link {
-  color: #ffffff;
+.social-link {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.dark-mode .nav-link:hover {
-  color: #00a4ea;
-}
-
-.dark-mode .dark-mode-toggle {
-  background: #007bff;
-  color: #ffffff;
-}
-
-.dark-mode .dark-mode-toggle:hover {
-  background: #0056b3;
+.social-link:hover {
+  color: #0056b3;
 }
